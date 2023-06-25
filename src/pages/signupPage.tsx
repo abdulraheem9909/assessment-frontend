@@ -39,6 +39,7 @@ export default function SignPage() {
     try {
       setLoading(true);
       const { data } = await signUpApi(value);
+      navigate("/login");
       setLoading(false);
       toast({
         title: `Signup successfully`,
