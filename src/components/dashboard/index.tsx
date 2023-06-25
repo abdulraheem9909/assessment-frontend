@@ -4,6 +4,7 @@ import useDashboard from "./useDashboard";
 import LoaderScreen from "../common/loader";
 
 export default function Dashboard() {
+  // THIS USEDASHBOARD HOOK HAVE ALL LOGICS , FUNCTOIONS , STATES AND API CALLING.
   const { loading, count, navigate } = useDashboard();
 
   return (

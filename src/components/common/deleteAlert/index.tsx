@@ -11,6 +11,8 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
+//THIS IS ALERT DAILOG OPEN WHEN CLICK ON DELETE BUTTON TO SHOW ALERT MESSAGE
+
 export function DeleteAlert({
   onClickHandler,
   isOpen,
@@ -31,8 +33,7 @@ export function DeleteAlert({
       >
         <AlertDialogOverlay />
 
-       
-        <AlertDialogContent  borderRadius={"11px 11px 11px 11px"} >
+        <AlertDialogContent borderRadius={"11px 11px 11px 11px"}>
           <AlertDialogHeader
             borderRadius={"10px 10px 0px 0px"}
             bg="#3182CE"
@@ -45,7 +46,7 @@ export function DeleteAlert({
             <Text>This will permanently delete the item.</Text>
             <Text> This action is irreversible. Proceed?</Text>
           </AlertDialogBody>
-          <AlertDialogFooter  borderRadius={"0px 0px 10px 10px"}>
+          <AlertDialogFooter borderRadius={"0px 0px 10px 10px"}>
             <Button
               ref={cancelRef}
               onClick={() => {

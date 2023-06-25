@@ -10,6 +10,8 @@ import NotFoundPage from "./pages/notFoundPage";
 import LoginPage from "./pages/loginPage";
 import SignPage from "./pages/signupPage";
 
+// THIS IS MAIN FILE FOR ROUTING WITH PRIVATE AND PUBLIC ROUTES BASED ON IS USER LOGGED IN OR NOT
+
 export const App = () => {
   return (
     <Routes>

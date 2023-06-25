@@ -8,6 +8,7 @@ import { DeleteAlert } from "../common/deleteAlert";
 import CarModal from "./carModal";
 
 const Car = () => {
+  // THIS HOOK HAVE LOGICAL DATA
   const {
     loading,
     carsList,

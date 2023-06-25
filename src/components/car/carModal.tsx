@@ -11,6 +11,8 @@ import {
 } from "@chakra-ui/react";
 import { GenericModal } from "../common/modal";
 
+//THIS MODAL IS OPEN WHEN CLICK ON ADD CAR OR UPDATE CAR
+
 const CarModal = ({
   isOpen,
   onModalClose,

@@ -10,6 +10,7 @@ import {
 } from "../../service/category.service";
 
 const useCategory = () => {
+  // IMPORTING REACT-HOOK-FORM FOR FORM VALIDATION , STATEMANAGEMENT AND SUBMITION
   const {
     register,
     formState: { errors },
@@ -35,12 +36,16 @@ const useCategory = () => {
   const [totalCount, setTotalCount] = useState(0);
   const [editState, setEditState] = useState<any>({});
 
+  // THESE ARE CHARA UI CUSTOM HOOK TO HANDLE MODALS
   const {
     isOpen: isOpenAlert,
     onOpen: onOpenAlert,
     onClose: onCloseAlert,
   } = useDisclosure();
   const { onOpen, isOpen, onClose } = useDisclosure();
+
+  //THIS USEEFFECT IS USE WHEN WE CLICK ON UPDATE BUTTON TO FILL ALL FIELDS OF FORM
+
   useEffect(() => {
     if (editState) {
       setValue("name", editState?.name);
@@ -50,6 +55,8 @@ const useCategory = () => {
   useEffect(() => {
     fetchData();
   }, [page]);
+
+  //THIS IS FETCH FUNCTION TO GET LIST
   const fetchData = async () => {
     try {
       setLoading(true);
@@ -69,19 +76,27 @@ const useCategory = () => {
       });
     }
   };
+
+  // THIS FUNCTION IS USE WHEN WE CLICK ON NEXT PAGE OF PAGINATED TABLE
   const handlePageChange = (event: any) => {
     const page = event.selected;
     setPage(page);
   };
+
+  // THIS FUNCTION TRIGGERED WHEN MODAL IS CLOSES
   const onModalClose = () => {
     reset();
     onClose();
     setUpdateModal(false);
   };
+
+  // WHEN EDIT BUTTON IS HIT THIS FUNCTION IS TRIGGERED
   const modalShowHandler = (row: any) => {
     setEditState(row);
     setUpdateModal(true);
   };
+
+  // THIS FUNCTION IS TRIGGERED WHEN CLICK ON DELETE HANDLER
   const deleteHandler = async (id: string) => {
     try {
       setLoadingDelete(true);
@@ -109,6 +124,8 @@ const useCategory = () => {
       });
     }
   };
+
+  // THIS FUNCTION IS TRIGGERED WHEN CREATING NEW CAR
   const onAdd = async (value: any) => {
     try {
       setLoadingAdd(true);
@@ -128,6 +145,8 @@ const useCategory = () => {
       });
     }
   };
+
+  // THIS FUNCTION IS TRIGGERED WHEN UPDATING A CAR
   const onUpdate = async (value: any) => {
     try {
       setLoadingUpdate(true);

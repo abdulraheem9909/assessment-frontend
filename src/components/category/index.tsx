@@ -8,6 +8,7 @@ import { DeleteAlert } from "../common/deleteAlert";
 import CategoryModal from "./categoryModal";
 
 const Category = () => {
+    // THIS HOOK HAVE LOGICAL DATA
   const {
     loading,
     categoryList,
@@ -81,7 +82,6 @@ const Category = () => {
     },
   ];
 
-  const data = [{ from: "inches" }, { from: "feet" }, { from: "yards" }];
   return (
     <>
       <HStack

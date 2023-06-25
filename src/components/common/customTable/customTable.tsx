@@ -17,6 +17,8 @@ import "./table.scss";
 import ReactPaginate from "react-paginate";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 
+// THIS IS CUSTOM TABLE COMPONENT FORMED USING  CHAKRA UI AND REACT-TABLE
+
 const CustomTable = ({
   columns,
   data,

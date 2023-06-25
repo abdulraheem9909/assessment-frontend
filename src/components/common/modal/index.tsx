@@ -9,6 +9,9 @@ import {
   ModalHeader,
   ModalOverlay,
 } from "@chakra-ui/react";
+
+// THIS IS GENERIC MODAL COMPONENT USED IN MULTIPLE COMPONENTS
+
 export const GenericModal = ({
   isOpen,
   onClose,

@@ -34,7 +34,7 @@ export default function SignPage() {
       name: "",
     },
   });
-
+  // THIS FUNCTION IS USED TO HIT API CALL FOR SIGNUP PURPOSE
   const onSubmit = async (value: any) => {
     try {
       setLoading(true);
@@ -84,7 +84,7 @@ export default function SignPage() {
           boxShadow={"lg"}
           p={8}
         >
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(onSubmit)} noValidate>
             <Stack spacing={4}>
               <FormControl
                 id="email"
