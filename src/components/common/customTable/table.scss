@@ -1,0 +1,68 @@
+.reactPaginateCustom {
+  display: flex;
+  background: rgba(255, 255, 255, 0.83);
+  list-style-type: none;
+  margin-left: 5px;
+  justify-content: flex-end;
+  border: 2px solid white;
+  padding: 0px 5px;
+  padding-top: 3px;
+  box-shadow: rgb(120 117 117 / 35%) 0px 5px 15px;
+  border-radius: 5px;
+  width: 100%;
+  // padding: 0px 30px;
+  ul {
+    display: inline-block;
+    margin-left: 20px;
+    padding: 30px 0px;
+  }
+  li {
+    display: inline-block;
+    color: black;
+    cursor: pointer;
+    // margin-right: 3px;
+    // margin-bottom: 5px;
+    border-radius: 8px;
+    padding: 10px 8px;
+  }
+  li a {
+    padding: 12px 8px;
+    border-radius: 8px;
+    // color: black;
+    outline: none;
+    &:hover {
+      background: #3182ce;
+      outline: none;
+      color: white !important;
+    }
+  }
+  li.active {
+    // background: #fa9595;
+    background: #3182ce;
+    outline: none;
+    color: white !important;
+  }
+}
+
+.paginateWrapper {
+  margin-top: 1rem;
+  display: flex;
+  column-gap: 20px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.loaderWrapper {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: sticky;
+  top: 50%;
+  left: 45%;
+  right: 50%;
+  bottom: 50%;
+}
+.noData {
+  font-size: 20px;
+}
