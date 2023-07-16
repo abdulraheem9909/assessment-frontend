@@ -116,7 +116,7 @@ const useCategory = () => {
       onCloseAlert();
       toast({
         title: "Something went wrong",
-        description: `${error?.response?.data?.message}`,
+        description: `${error?.response?.data?.error}`,
 
         status: "error",
         variant: "top-accent",
@@ -138,7 +138,7 @@ const useCategory = () => {
       setLoadingAdd(false);
       toast({
         title: "Something went wrong",
-        description: `${error?.response?.data?.message}`,
+        description: `${error?.response?.data?.error}`,
         status: "error",
         variant: "top-accent",
         isClosable: true,
@@ -150,7 +150,7 @@ const useCategory = () => {
   const onUpdate = async (value: any) => {
     try {
       setLoadingUpdate(true);
-      await updateCategory(value, editState?.id);
+      await updateCategory(value, editState?._id);
       setLoadingUpdate(false);
       fetchData();
       onModalClose();

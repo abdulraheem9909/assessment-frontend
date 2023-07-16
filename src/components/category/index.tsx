@@ -72,7 +72,7 @@ const Category = () => {
               cursor="pointer"
               color="red"
               onClick={() => {
-                setSelectedId(row.original.id);
+                setSelectedId(row.original._id);
                 onOpenAlert();
               }}
             />

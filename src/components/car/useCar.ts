@@ -164,7 +164,7 @@ const useCar = () => {
   const onUpdate = async (value: any) => {
     try {
       setLoadingUpdate(true);
-      await updateCar(value, editState?.id);
+      await updateCar(value, editState?._id);
       setLoadingUpdate(false);
       fetchData();
       onModalClose();

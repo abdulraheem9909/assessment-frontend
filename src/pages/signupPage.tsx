@@ -43,7 +43,7 @@ export default function SignPage() {
       setLoading(false);
       toast({
         title: `Signup successfully`,
-        description: `Please Check email on ${data?.email}`,
+        description: `Please Check email on ${value?.email}`,
         status: "success",
         variant: "top-accent",
         isClosable: true,
@@ -52,7 +52,7 @@ export default function SignPage() {
       setLoading(false);
       toast({
         title: "Error Loggin in",
-        description: `${error?.response?.data?.message}`,
+        description: `${error?.response?.data?.error}`,
         status: "error",
         variant: "top-accent",
         isClosable: true,

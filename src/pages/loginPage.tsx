@@ -57,7 +57,7 @@ export default function LoginPage() {
       setLoading(false);
       toast({
         title: "Error Loggin in",
-        description: `${error?.response?.data?.message}`,
+        description: `${error?.response?.data?.error}`,
         status: "error",
         variant: "top-accent",
         isClosable: true,
